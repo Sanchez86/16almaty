@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Almaty</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css"rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/media.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/html5lightbox.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/srction.js"></script>
+</head>
+<body>
+    <!-- Modal enter -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <img src="images/popapClose.png" /></button>
+                    <h4 class="modal-title" id="myModalLabel">Авторизация на сайте</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div>
+                            <p class="subModalInputText">E-mail</p>
+                            <input type="text" name="name" class="modalInputText" />
+                        </div>
+                        <div>
+                            <p class="subModalInputText">Пароль</p>
+                            <input type="password" name="name" class="modalInputText" />
+                        </div>
+                        <div>
+                            <input type="submit" value="ВХОД" class="modalInputSubmit" />
+                        </div>
+                        <div class="modalLinkForgot">
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                        <div class="modalSocial">
+                            <a href="#"><img src="images/popap1.png" /></a>
+                            <a href="#"><img src="images/popap2.png" /></a>
+                            <a href="#"><img src="images/popap3.png" /></a>
+                            <a href="#"><img src="images/popap4.png" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal enter -->
+    <!-- Modal autoriziation -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <img src="images/popapClose.png" />
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Регистрация на сайте</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <div>
+                            <p class="subModalInputText">Полное имя</p>
+                            <input type="text" name="name" class="modalInputText" />
+                        </div>
+                        <div>
+                            <p class="subModalInputText">E-mail</p>
+                            <input type="text" name="name" class="modalInputText" />
+                        </div>
+                        <div>
+                            <p class="subModalInputText">Пароль</p>
+                            <input type="password" name="name" class="modalInputText" />
+                        </div>
+                        <div>
+                            <p class="subModalInputText">Подтверждение пароля</p>
+                            <input type="password" name="name" class="modalInputText" />
+                        </div>
+
+                        <div class="capcha">
+                            <img src="images/popapCapcha.png" />
+                            <span>Обновить</span>
+                        </div>
+
+                        <div>
+                            <p class="subModalInputText">Введите символы с картинки</p>
+                            <input type="text" name="name" class="modalInputText" />
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Создать пользователя" class="modalInputSubmit" />
+                        </div>
+                        <div class="modalLinkForgot">
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                        <div class="modalSocial">
+                            <a href="#"><img src="images/popap1.png" /></a>
+                            <a href="#"><img src="images/popap2.png" /></a>
+                            <a href="#"><img src="images/popap3.png" /></a>
+                            <a href="#"><img src="images/popap4.png" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal autoriziation -->
+
+    <!-- Rel:1.2 -->
+    <!-- кнопка на верх -->
+    <div id="top"><i class="fa fa-chevron-up"><span>UP</span></i></div>
+
+    <!-- menu -->
+    <div id="navbar" class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="subMenu">
+            <div class="subMenuLeft">
+                <a href="#" data-toggle="modal" data-target="#myModal2">регистрация</a>
+                <span> | </span>
+                <a href="#" data-toggle="modal" data-target="#myModal">вход</a>
+                <span class="responsive"> | </span>
+            </div>
+            <div class="sub_visuallyImpaired">
+                <a href="#" class="visuallyImpaired">версия для слабовидящих</a>
+            </div>
+            <div class="subMenuRight">
+                <a href="#">қаз</a>
+                <span> | </span>
+                <a href="#" class="active">рус</a>
+                <span> | </span>
+                <a href="#">eng</a>
+            </div>
+
+        </div>
+        <div class="navbar-header">
+            <!--navbar-right-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img class="logo1" src="images/logo1.png" />
+                <img class="logo2" src="images/logo2.png" />
+            </a>
+        </div>
+        <div id="link1" class="menulevel navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="menu1">
+                <li><a href="#" class="link1 multiLink" data-current-block="a1">Жителям</a></li>
+                <li><a href="#" class="link2 multiLink" data-current-block="a2">Бизнесу</a></li>
+                <li><a href="#" class="link3 multiLink" data-current-block="a3">Гостям</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav zhitelyam" data-current-block="b1">
+                <li class="menu menueZ1">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi1.png" />
+                        </div>
+                        Семья
+                    </a>
+                </li>
+                <li class="menu menueZ2">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi2.png" />
+                        </div>Здоровье
+                    </a>
+                </li>
+                <li class="menu menueZ3">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi3.png" />
+                        </div> Образование
+                    </a>
+                </li>
+                <li class="menu menueZ4">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi4.png" />
+                        </div>Работа
+                    </a>
+                </li>
+                <li class="menu menueZ5">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi5.png" />
+                        </div> Служение отечеству
+                    </a>
+                </li>
+                <li class="menu menueZ6">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi6.png" />
+                        </div> Финансы
+                    </a>
+                </li>
+                <li class="menu menueZ7">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi7.png" />
+                        </div> Пособия и льготы
+                    </a>
+                </li>
+                <li class="menu menueZ8">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi8.png" />
+                        </div>Права потребителя
+                    </a>
+                </li>
+                <li class="menu menueZ9">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi9.png" />
+                        </div> Транспорт
+                    </a>
+                </li>
+                <li class="menu menueZ10">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi10.png" />
+                        </div>Недвижимость
+                    </a>
+                </li>
+                <li class="menu menueZ11">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/zi11.png" />
+                        </div> Миграция
+                    </a>
+                </li>
+                <li class="closeMenu"></li>
+            </ul>
+
+            <ul class="nav navbar-nav business" data-current-block="b2">
+                <li class="menu menueB1">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b1.png" />
+                        </div>
+                        Открытие/Ведение Бизнеса
+                    </a>
+                </li>
+                <li class="menu menueB2">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b2.png" />
+                        </div>
+                        Инвесторам
+                    </a>
+                </li>
+                <li class="menu menueB3">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b3.png" />
+                        </div>
+                        Субсидии и льготы
+                    </a>
+                </li>
+                <li class="menu menueB4">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b4.png" />
+                        </div>
+                        Налоги
+                    </a>
+                </li>
+                <li class="menu menueB5">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b5.png" />
+                        </div>
+                        Интеллектуальная собственность
+                    </a>
+                </li>
+                <li class="menu menueB6">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b6.png" />
+                        </div>
+                        Аккредитация Аттестация Лицензия
+                    </a>
+                </li>
+                <li class="menu menueB7">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b7.png" />
+                        </div>
+                        Государственные закупки
+                    </a>
+                </li>
+                <li class="menu menueB8">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/b8.png" />
+                        </div>
+                        Трудовое законодательство РК
+                    </a>
+                </li>
+                <li class="closeMenu"></li>
+            </ul>
+
+            <ul class="nav navbar-nav guest" data-current-block="b3">
+                <li class="menu menueG1">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu1.png" />
+                        </div>
+                        Где остановится
+                    </a>
+                </li>
+                <li class="menu menueG2">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu2.png" />
+                        </div>
+                        Где поесть
+                    </a>
+                </li>
+                <li class="menu menueG3">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu3.png" />
+                        </div>
+                        Что посмотреть
+                    </a>
+                </li>
+                <!--<li class="menu menueG3">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu4.png" />
+                        </div>
+                        Полезные советы 
+                    </a>
+                </li>-->
+                <li class="menu menueG4">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu5.png" />
+                        </div>
+                        8 маршрутов по Алматы
+                    </a>
+                </li>
+                <li class="menu menueG5">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu6.png" />
+                        </div>
+                        Активный спорт
+                    </a>
+                </li>
+                <li class="menu menueG6">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu7.png" />
+                        </div>
+                        Культурные мероприятия
+                    </a>
+                </li>
+                <li class="menu menueG7">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu8.png" />
+                        </div>
+                        Советы
+                    </a>
+                </li>
+                <li class="menu menueG8">
+                    <a href="#">
+                        <div class="subLink">
+                            <img src="images/gu9.png" />
+                        </div>
+                        О городе
+                    </a>
+                </li>
+                <li class="closeMenu"></li>
+                
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div>
+    <!-- end menu -->
+
+    <div class="wrap" id="mainPageWrap">
+        <section id="one" style="background-color:#ddd;" class="">
+            <!--anchor-->
+            <div class="anchor">
+                <ul>
+                    <li><a href="#one" class="activeAnchor"></a></li>
+                    <li><a href="#three"></a></li>
+                    <li><a href="#four"></a></li>
+                    <li><a href="#five"></a></li>
+                    <li><a href="#six"></a></li>
+                </ul>
+            </div>
+            <!-- end anchor-->
+            <!-- slider -->
+            <div id="slider1" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <!--<img src="images/bgTop2.jpg" />-->
+                        <div class="bgTop2 bgTop"></div>
+                    </div>
+                    <div class="item">
+                        <div class="bgTop1 bgTop"></div>
+                        <!--<img src="images/bgTop1.jpg" />-->
+                    </div>
+                    <div class="item">
+                        <div class="bgTop3 bgTop"></div>
+                        <!--<img src="images/bgTop3.jpg" />-->
+                    </div>
+                    <div class="item">
+                        <div class="bgTop4 bgTop"></div>
+                        <!--<img src="images/bgTop4.jpg" />-->
+                    </div>
+                    <div class="item">
+                        <div class="bgTop5 bgTop"></div>
+                        <!--<img src="images/bgTop5.jpg" />-->
+                    </div>
+                    <div class="item">
+                        <div class="bgTop6 bgTop"></div>
+                        <!--<img src="images/bgTop6.jpg" />-->
+                    </div>
+                </div>
+            </div>
+            <!-- end slider -->
+            <div id="blockSearchBlock">
+                <div class="blockSearch">
+                    <form id="livesearch" action="/main/search" name="example">
+                        <p class="want">Я хочу:</p>
+                        <p>
+                            <input type="text" required="" class="form-control search_box" size="25" placeholder="Что искать?" name="p" onclick="document.example.p.value = '';stop();">
+                            <input type="submit" class="submitSearch" name="name" value="" onclick="$('#livesearch').submit();" />
+                        </p>
+                    </form>
+                </div>
+                <a href="#anchor1" class="arrow_down wow pulse" data-wow-iteration="100"></a>
+            </div>
+        </section>
+        
+
+        
+        <section id="three" class="">
+            <div class="live" id="anchor1">
+                жизненные ситуации
+            </div>
+            <a href="#" class="linkLive">
+                узнай о всех жизненных ситуациях
+                <span class="arrow-right-Live"></span>
+            </a>
+            <div class="blockLive">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive blocksLive1">
+                            <div class="headerLive">Семья</div>
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Я вступаю в брак</a></li>
+                                    <li><a href="#">У меня родился ребенок</a></li>
+                                    <li><a href="#">Молодая семья</a></li>
+                                    <li>
+                                        <a href="#">
+                                            Я хочу получить паспорт/<br>
+                                            удостоверение для ребенка
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive blocksLive2">
+                            <div class="headerLive">Образование</div>
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Я хочу зачислить ребенка в деткский сад</a></li>
+                                    <li><a href="#">Я хочу зачислить ребенка в школу</a></li>
+                                    <li><a href="#">Я выпускник</a></li>
+                                    <li><a href="#">Я хочу учиться за рубежом</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive blocksLive3">
+                            <div class="headerLive">Бизнесу</div>
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Я хочу открыть бизнес</a></li>
+                                    <li><a href="#">Я хочу запатентовать изобретение</a></li>
+                                    <li>
+                                        <a href="#">
+                                            Я хочу получить кредит на
+                                            оборудование/производство
+
+                                        </a>
+                                    </li>
+                                    <li><a href="#">Инвест проекты</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive blocksLive4">
+                            <div class="headerLive">Гостю</div>
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Где остановиться</a></li>
+                                    <li><a href="#">Где поесть</a></li>
+                                    <li><a href="#">Что посмотреть</a></li>
+                                    <li><a href="#">Активный спорт</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="four" class="">
+            <div class="live situation" id="anchor2">
+                Популярные услуги
+            </div>
+            <a href="#" class="linkLive ">
+                узнай о всех популярных услугах
+                <span class="arrow-right-Live"></span>
+            </a>
+            <div class="blockLive">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Получение адресной справки</a></li>
+                                    <li><a href="#">Получение справку о пенсионных начислениях</a></li>
+                                    <li><a href="#">Получение справки о заключении брака</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Постановка ребёнка в очередь в детский сад</a></li>
+                                    <li><a href="#">Получение справки о рождении</a></li>
+                                    <li><a href="#">Запись на приём к врачу</a></li>
+                                    <li><a href="#">Получение справки о безработице</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Получение сведении об ИИН</a></li>
+                                    <li><a href="#">Выдача справки об отсутствии (наличии) недвижимого имущества</a></li>
+                                    <li><a href="#">Представление информации о принадлежности земельного участка</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <div class="contentLive">
+                                <ul>
+                                    <li><a href="#">Представление кадастровой информации на земельный участок</a></li>
+                                    <li><a href="#">Проверка адресных данных (данные о прописке)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="five" class="">
+            <div class="live news" id="anchor3">
+                Новости
+            </div>
+            <a href="#" class="linkLive ">
+                будь в курсе новостей в твоём городе
+                <span class="arrow-right-Live"></span>
+            </a>
+            <div class="blockLive">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <a class="headerNews">
+                                В Алматы наградили лучших медработников
+                            </a>
+                            <div class="contentNews">
+                                Церемония награждения медицинского персонала города «Призвание-2016» состоялась сегодня в Государственном академическом театре оперы и балета имени Абая.
+                            </div>
+                            <div class="dateNews">
+                                19.08.2016
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <a class="headerNews">
+                                В Алматы возводится уникальный учебно-тренировочный комплекс морской академии
+                            </a>
+                            <div class="contentNews">
+                                Аким Алматы Бауыржан Байбек ознакомился с ходом строительства 2-ой очереди Специальной экономической зоны «Парк инновационных технологий»
+                            </div>
+                            <div class="dateNews">
+                                18.08.2016
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <a class="headerNews">
+                                велопробег продолжился детским
+                                дуатлоном и любительским боксом
+                            </a>
+                            <div class="contentNews">
+                                Сегодня в Алматы прошел ряд спортивных
+                                мероприятий: Детский дуатлон, а также VI -
+                                турнир по боксу среди непрофессионалов.
+                            </div>
+                            <div class="dateNews">
+                                15.08.2016
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 blocksLive">
+                            <a class="headerNews">
+                                1000-летний Алматы принимает
+                                участников IV этнофестиваля
+                                The Spirit of Tengri
+                            </a>
+                            <div class="contentNews">
+                                Сегодня на площади Абая состоялся IV
+                                фестиваль Современной Этнической музыки
+                                The Spirit of Tengri 2016.
+                            </div>
+                            <div class="dateNews">
+                                14.08.2016
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        
+        <section id="six">
+            <div class="live info" id="anchor4">
+                инфографика
+            </div>
+            <a href="#" class="linkLive ">
+                Статистика твоего города
+                <span class="arrow-right-Live"></span>
+            </a>
+            <div class="blockLive">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive">
+                            <a href="images/info1.jpg" class="html5lightbox">
+                                <img src="images/info1.jpg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive">
+                            <a href="images/info2.jpg" class="html5lightbox">
+                                <img src="images/info2.jpg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive">
+                            <a href="images/info3.jpg" class="html5lightbox">
+                                <img src="images/info3.jpg" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 blocksLive">
+                            <a href="video/3823526.mp4" class="html5lightbox info4" data-width="480" data-height="320">
+                                <img src="images/info4.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+</div>
+    <div id="footer" class="footer">
+        <div class="blockLive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 blocksLive blocksLive1  footBlock1">
+                        <div class="blockFoot resp1">
+                            <img src="images/footerLogo.png" class="footerLogo" />
+                        </div>
+                        <div class="blockFoot resp2">
+                            <ul>
+                                <li><span>Жителям</span></li>
+                                <li><a href="#">Семья</a></li>
+                                <li><a href="#">Здоровье</a></li>
+                                <li><a href="#">Образование</a></li>
+                                <li><a href="#">Работа</a></li>
+                                <li><a href="#">Служение отечеству</a></li>
+                                <li><a href="#">Финансы</a></li>
+                                <li><a href="#">Пособия и льготы</a></li>
+                                <li><a href="#">Права потребителя</a></li>
+                                <li><a href="#">Транспорт</a></li>
+                                <li><a href="#">Недвижимость</a></li>
+                                <li><a href="#">Миграция</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 blocksLive footBlock2">
+                        <div class="blockFoot">
+                            <ul class="blockFootBussines">
+                                <li><span>Бизнесу</span></li>
+                                <li><a href="#">Открытие/Ведение Бизнеса</a></li>
+                                <li><a href="#">Инвесторам</a></li>
+                                <li><a href="#">Субсидии и льготы</a></li>
+                                <li><a href="#">Налоги</a></li>
+                                <li><a href="#">Интеллектуальная собственность</a></li>
+                                <li><a href="#">Аккредитация Аттестация Лицензия</a></li>
+                                <li><a href="#">Государственные закупки</a></li>
+                                <li><a href="#">Трудовое законодательство РК</a></li>
+                            </ul>
+                        </div>
+                        <div class="blockFoot">
+                            <ul>
+                                <li><span>Гостям</span></li>
+                                <li><a href="#">Где остановится</a></li>
+                                <li><a href="#">Где поесть</a></li>
+                                <li><a href="#">Что посмотреть </a></li>
+                                <!--<li><a href="#">Полезные советы</a></li>-->
+                                <li><a href="#">8 маршрутов по Алматы</a></li>
+                                <li><a href="#">Активный спорт</a></li>
+                                <li><a href="#">Культурные мероприятия</a></li>
+                                <li><a href="#">Советы</a></li>
+                                <li><a href="#">О городе</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 blocksLive footBlock3">
+                        <div class="poleznye-populyarnie">полезные ссылки</div>
+                        <div class="footer-ala footer-ala1">
+                            Официальный портал акимата
+                            <span>г. Алматы </span><a href="www.almaty.gov.kz">www.almaty.gov.kz</a>
+                        </div>
+                        <div class="footer-ala footer-ala2">
+                            Официальный сайт АО «Центр
+                            развития г. Алматы <a href="www.almatydc.kz">www.almatydc.kz</a>
+                        </div>
+                        <div class="footer-ala footer-ala3">
+                            Всемирная зимняя универсиада
+                            в <span>г. Алматы</span> <a href="www.almaty2017.com">www.almaty2017.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 blocksLive footBlock4">
+                        <div class="poleznye-populyarnie">популярные приложения</div>
+                        <div class="app">
+                            <a href="#"><img src="images/footerApp1.png" /></a>
+                            <a href="#"><img src="images/footerApp2.png" /></a>
+                        </div>
+                        <div class="footerIcon">
+                            <a href="#"><img src="images/footerApp3.png" /></a>
+                            <a href="#"><img src="images/footerApp4.png" /></a>
+                            <a href="#"><img src="images/footerApp5.png" /></a>
+                        </div>
+                        <div class="footerSoc">
+                            <p>Мы в социальных сетях</p>
+                            <div class="footerIn"></div>
+                            <div class="footerF"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="copy">
+            <p>
+                АО Центр развития города Алматы © 2016 | Website designed by <span>ZhasylOrda</span> limited partnership 
+            </p>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+              new WOW().init();
+              
+var ids=['one', 'anchor1', 'anchor2', 'anchor3', 'anchor4'];
+$(window).scroll(function(){
+ for(var i in ids){
+  var $elem=$('#'+ids[i]);
+  if($elem.offset().top+$elem.height()<$(window).scrollTop()+600){
+        $('.activeAnchor').removeClass('activeAnchor');
+        $('a[href="#'+ids[i]+'"]').addClass('activeAnchor');
+  }
+ }
+});
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
